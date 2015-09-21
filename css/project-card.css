@@ -71,7 +71,8 @@
     position: absolute;
     top: 245px;
     opacity: 0.9;
-    background: #4298c3;
+    background: #123853;
+    /*4298c3*/
     /*005389*/
     
     width: 100%;
@@ -142,21 +143,19 @@
 }
 
 .card-graph:hover {
-    opacity: 0.9;
     right: 0px;
     top: 0px;
     width: 200px;
     height: 250px;
     border-radius: 0 0 0 25px;
-    background: #456!important;
+    background: rgba(68, 85, 102, 0.9)!important;
     overflow: visible;
 }
 
 .card-graph:hover canvas {
-    opacity: 5;
+    opacity: 1;
     width: 180px;
     height: 180px;
-    background: #456;
     display: block;
     position: absolute;
     bottom: 10px;

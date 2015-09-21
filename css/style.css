@@ -39,7 +39,7 @@ body {
 }
 
 #jumbo {
-    background-image: url("../res/img/starfish.jpg");
+    background-image: url("../res/img/SV(Gray).png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -49,8 +49,11 @@ body {
 }
 
 #super-center {
+    border: 2px solid white;
+    padding: 15px;
+    
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -93,10 +96,10 @@ body {
 .info-section > h1 > span{
     background: white;
     position: absolute;
-    left: 0;
-    bottom: -15px;
-    width: 100%;
-    height: 2px;
+    left: -30%;
+    bottom: -10px;
+    width: 160%;
+    height: 1px;
 }
 .info-section > div{
     max-width: 100%;
@@ -154,6 +157,10 @@ body {
     font-weight: 100;
     font-size: 1.5em;
     line-height: 1.4em;
+}
+
+.timeline .event h3 > a{
+    text-decoration: none;
 }
 
 .timeline .event div {
@@ -228,6 +235,7 @@ body {
 /*================================================================================*/
 
 #skillsDisplay {
+    position: relative;
     display: inline-block;
 }
 
@@ -239,25 +247,23 @@ body {
 }
 
 #skillsLegend {
-    display: inline-block;
-    text-align: left
+    margin-top: 15px;
+    display: inline;
+    float:right;
+    text-align: left;
 }
 
 #skillsChart {
     margin: 15px;
-    width: 200px;
     height: 200px;
+    width: 200px;
     display: inline-block;
-    margin-right: 20px;
 }
 
 .doughnut-legend {
     float: left;
-    width: 200px;
-    height: 200px;
     list-style: none;
     font-size: 14px;
-    display: inline-block;
 }
 
 .doughnut-legend li * {
