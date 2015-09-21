@@ -1,0 +1,284 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Oswald:400,300,700);
+/*@import 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';*/
+
+* {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    color: #fff;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: #1d2128;
+}
+
+#footer {
+    min-height: 100px;
+}
+
+/*================================================================================*/
+/* Jumbotron */
+/*================================================================================*/
+
+.super-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.super-layer * {
+    position: relative;
+}
+
+#jumbo {
+    background-image: url("../res/img/starfish.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#super-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#super-center h1 {
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+}
+
+#super-center p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/*================================================================================*/
+/* Body and Main Content */
+/*================================================================================*/
+
+.centered-content{
+    width: 50%;
+    margin: auto;
+}
+.info-section{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.info-section > h1{
+    display: inline-block;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    font-size: 2.4em;
+    position: relative;
+    
+    margin-bottom: 30px;
+}
+.info-section > h1 > span{
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    height: 2px;
+}
+.info-section > div{
+    max-width: 100%;
+    text-align: left;
+    background: rgba(100, 100, 100, 0.2);
+    padding: 10px;
+}
+
+@media (max-width: 800px) {
+    .centered-content{
+        width: 100%;
+    }
+}
+
+/*================================================================================*/
+/* Special Modifiers */
+/*================================================================================*/
+
+#education > div, #experience > div{
+    padding: 0;
+}
+
+.timeline *{
+    list-style: none;
+}
+
+/*================================================================================*/
+/* Timeline */
+/*================================================================================*/
+
+.timeline { 
+    border-left: 4px solid #c95600;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.5px;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 1.03em;
+    padding: 30px;
+    text-align: left;
+    font-weight: 1;
+}
+
+.timeline .event {
+    border-bottom: 1px dashed #fff;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline .event h3 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    font-size: 1.5em;
+    line-height: 1.4em;
+}
+
+.timeline .event div {
+    margin-top: 10px!important;
+}
+
+.timeline .event:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+.timeline .event:before {
+    left: -230px;
+    color: #fff;
+    content: attr(data-date);
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.timeline .event:after {
+    box-shadow: 0 0 0 4px #c95600;
+    left: -57.85px;
+    background: Transparent;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    content: "";
+    top: 5px;
+}
+
+@media (max-width: 800px) {
+    .timeline {
+        max-width: 100%;
+    }
+    .timeline .event:after {
+        display: none
+    }
+    .timeline .event:before {
+        left: -0.5px;
+        top: 35px;
+        background-color: #4298c3;
+        color: white;
+        padding: 2px 8px 2px 8px;
+        content: attr(data-date);
+        text-align: left;
+        font-weight: 400;
+        font-size: 0.9em;
+        min-width: 120px;
+    }
+    .timeline .event h3 {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .timeline .event div {
+        top: 27px;
+        padding: 10px 0px 10px 0px;
+        position: relative;
+    }
+}
+
+/*================================================================================*/
+/* Skills Display */
+/*================================================================================*/
+
+#skillsDisplay {
+    display: inline-block;
+}
+
+#skillsDisplay h3 {
+    text-align: center;
+}
+#skillsDisplay > *{
+    text-align: center;
+}
+
+#skillsLegend {
+    display: inline-block;
+    text-align: left
+}
+
+#skillsChart {
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.doughnut-legend {
+    float: left;
+    width: 200px;
+    height: 200px;
+    list-style: none;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.doughnut-legend li * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.doughnut-legend li {
+    margin: 5px;
+    display: block;
+}
+
+.doughnut-legend li div {
+    font-size: 1em;
+    width: 3em;
+}
+
+.doughnut-legend li span {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
