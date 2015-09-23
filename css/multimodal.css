@@ -75,7 +75,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 300px;
+    min-width: 600px;
     min-height: 300px;
     transition: left 0.5s 0s;
 }
@@ -148,11 +148,39 @@ a {
     transition: margin-top 0.3s 0s;
 }
 
-#modal {}
+.go-back {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: inline-block;
+    margin-bottom: 10px;
+}
 
-#modal:before {}
+#modal {
+    background: url("http://s.hswstatic.com/gif/how-bridges-work-1.jpg");
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
 
-#modal:after {}
+#modal:before {
+    position: absolute;
+    left: 320px;
+    width: 300px;
+    content: "Modal Title";
+    font-size: 30px;
+    font-weight: 100;
+    border-bottom: 1px solid white;
+}
+
+#modal:after {
+    position: absolute;
+    left: 325px;
+    top: 90px;
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ";
+    font-size: 18px;
+}
 
 #footer {
     position: absolute;
