@@ -1,36 +1,40 @@
+$("a").each(function () {
+    $(this).attr("target", "_blank")
+});
+
 var pieOptions = {
     //Boolean - Whether we should show a stroke on each segment
-    segmentShowStroke : true,
+    segmentShowStroke: true,
 
     //String - The colour of each segment stroke
-    segmentStrokeColor : "#fff",
+    segmentStrokeColor: "#fff",
 
     //Number - The width of each segment stroke
-    segmentStrokeWidth : 1,
+    segmentStrokeWidth: 1,
 
     //Number - The percentage of the chart that we cut out of the middle
-    percentageInnerCutout : 60, // This is 0 for Pie charts
+    percentageInnerCutout: 60, // This is 0 for Pie charts
 
     //Number - Amount of animation steps
-    animationSteps : 100,
+    animationSteps: 100,
 
     //String - Animation easing effect
-    animationEasing : "easeOutBounce",
+    animationEasing: "easeOutBounce",
 
     //Boolean - Whether we animate the rotation of the Doughnut
-    animateRotate : true,
+    animateRotate: true,
 
     //Boolean - Whether we animate scaling the Doughnut from the centre
-    animateScale : false,
+    animateScale: false,
 
     //String - A legend template
-    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><div class=\"doughnut-value\"><%=segments[i].value%>%</div><span style=\"background-color:<%=segments[i].fillColor%>\"></span><p><%if(segments[i].label){%><%=segments[i].label%><%}%></p></li><%}%></ul>"
+    legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><div class=\"doughnut-value\"><%=segments[i].value%>%</div><span style=\"background-color:<%=segments[i].fillColor%>\"></span><p><%if(segments[i].label){%><%=segments[i].label%><%}%></p></li><%}%></ul>"
 
 };
 var skillsData = [
     {
         value: 40,
-        color:"#5B90BF",
+        color: "#5B90BF",
         highlight: "#000",
         label: "C#"
     },
@@ -46,7 +50,7 @@ var skillsData = [
         highlight: "#000",
         label: "Node JS"
     },
-	{
+    {
         value: 20,
         color: "#cc478e",
         highlight: "#000",
@@ -66,11 +70,11 @@ var skillsData = [
     }
 ];
 var sum = 0;
-skillsData.forEach(function(dataPoint){
-	sum += dataPoint.value;
+skillsData.forEach(function (dataPoint) {
+    sum += dataPoint.value;
 });
-skillsData.forEach(function(dataPoint){
-	dataPoint.value = Math.round(100*(dataPoint.value/sum));
+skillsData.forEach(function (dataPoint) {
+    dataPoint.value = Math.round(100 * (dataPoint.value / sum));
 });
 var myDoughnutChart = new Chart(document.getElementById("skillsChart").getContext("2d")).Doughnut(skillsData, pieOptions);
 $("#skillsLegend").append(myDoughnutChart.generateLegend());
