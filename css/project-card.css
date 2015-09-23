@@ -92,8 +92,15 @@
 }
 
 .card-details h4 {
-    margin-left: 10px;
+    margin-left: 25px;
     margin-bottom: 5px;
+}
+.card-details h4:before{
+    content: "> ";
+    position: absolute;
+    font-size: 20px;
+    left: 15px;
+    top: 24px;
 }
 
 .card-details span {

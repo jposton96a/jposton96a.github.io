@@ -18,8 +18,14 @@ body {
     background: #1d2128;
 }
 
+
+/*================================================================================*/
+/* Footer */
+/*================================================================================*/
 #footer {
+    max-width: 100vw;
     min-height: 100px;
+    position: relative;
 }
 
 /*================================================================================*/
@@ -74,6 +80,9 @@ body {
 /* Body and Main Content */
 /*================================================================================*/
 
+.section-content{
+    position: relative;
+}
 .centered-content{
     width: 50%;
     margin: auto;
@@ -122,8 +131,26 @@ body {
     padding: 0;
 }
 
-.timeline *{
-    list-style: none;
+#social-section{
+    display: inline-block;
+}
+
+.social-icon i{
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    
+    line-height: 20px;
+    white-space: nowrap;
+    text-align: center;
+    
+    padding: 10px;
+    border-radius: 1000000px; 
+    color: #000;
+}
+
+#contact-info{
+    margin-bottom: 10px;
 }
 
 /*================================================================================*/
@@ -142,6 +169,10 @@ body {
     padding: 30px;
     text-align: left;
     font-weight: 1;
+}
+
+.timeline *{
+    list-style: none;
 }
 
 .timeline .event {
@@ -242,9 +273,6 @@ body {
 #skillsDisplay h3 {
     text-align: center;
 }
-#skillsDisplay > *{
-    text-align: center;
-}
 
 #skillsLegend {
     margin-top: 15px;
@@ -260,6 +288,24 @@ body {
     display: inline-block;
 }
 
+#otherSkills{
+    display: inline-block;
+    padding-left: 7px;
+    border-left: 1px solid #fff;
+}
+#otherSkills > ul > li{
+    margin-bottom: 10px;
+    list-style: none;
+    border-bottom: 1px dashed #fff;   
+}
+
+#otherSkills > ul > li p{
+    margin-left: 15px;
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+/*This is the design for the skills chart legend*/
 .doughnut-legend {
     float: left;
     list-style: none;
