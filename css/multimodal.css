@@ -70,6 +70,22 @@ a {
     font-weight: 200;
 }
 
+#header_nav {
+    float: right;
+    transform: translateY(50%);
+    height: 100%;
+}
+
+#header_nav > li:hover {
+    border-bottom: 1px solid white;
+}
+
+#header_nav > li {
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: border-bottom 0.1s 0s;
+}
+
 #modal-info {
     position: absolute;
     top: 50%;
@@ -178,7 +194,7 @@ a {
     position: absolute;
     left: 325px;
     top: 90px;
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ";
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat";
     font-size: 18px;
 }
 

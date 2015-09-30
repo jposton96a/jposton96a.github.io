@@ -1,8 +1,23 @@
-$(".read-more").click(function () {
-    $("#circle-modals").addClass("offscreen");
-    $("#modal-info").removeClass("offscreen");
+// Load All Extra Pages and add them to the document
+var pages = [];
+$("link[rel='import']").each(function () {
+    pages.push($(this)[0].import.getElementsByClassName("page"))
 });
-$(".go-back").click(function () {
-    $("#circle-modals").removeClass("offscreen");
-    $("#modal-info").addClass("offscreen");
+for (pageNum in pages) {
+    $("#page_content").append(pages[pageNum]);
+}
+
+$(".local_link").click(function () {
+    goToPage($(this).attr("data-modal"));
 });
+
+function goToPage(pageName) {
+    console.log("Going to page: " + pageName);
+    $(".page").each(function () {
+        if ($(this).attr("id") == pageName) {
+            $(this).removeClass("offscreen");
+        } else {
+            $(this).addClass("offscreen");
+        }
+    });
+}
